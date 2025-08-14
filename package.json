@@ -1,0 +1,21 @@
+{
+  "name": "blank54",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "expo": "54.0.0-canary-20250729-d8899ae",
+    "expo-status-bar": "2.2.4-canary-20250729-d8899ae",
+    "react": "19.1.0",
+    "react-native": "0.80.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0"
+  },
+  "private": true
+}
