@@ -4,15 +4,15 @@
   "main": "index.js",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "web": "expo start --web"
   },
   "dependencies": {
-    "expo": "54.0.0-canary-20250729-d8899ae",
-    "expo-status-bar": "2.2.4-canary-20250729-d8899ae",
+    "expo": "54.0.0-preview.4",
     "react": "19.1.0",
-    "react-native": "0.80.1"
+    "react-native": "0.81.0",
+    "react-native-mmkv": "^3.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
