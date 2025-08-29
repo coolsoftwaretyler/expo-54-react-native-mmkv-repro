@@ -32,11 +32,11 @@
         "expo-build-properties",
         {
           "ios": {
-            "buildReactNativeFromSource": true,
-            "useFrameworks": "static"
+            "buildReactNativeFromSource": false
           }
         }
-      ]
+      ],
+      "./plugins/with-modular-headers"
     ]
   }
 }
