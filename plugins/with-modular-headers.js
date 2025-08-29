@@ -20,9 +20,10 @@ const withModularHeaders = (config) => {
         return config;
       }
 
-      // Find the target 'blank54' do block and add use_modular_headers! after it
-      const targetPattern = /(target\s+'blank54'\s+do\s*\n)/;
+      // Find the first target block and add use_modular_headers! after it
+      const targetPattern = /(target\s+['"]([^'"]+)['"]\s+do\s*\n)/;
       if (targetPattern.test(podfileContent)) {
+        // Only replace the first occurrence
         podfileContent = podfileContent.replace(
           targetPattern,
           "$1  use_modular_headers!\n\n"
@@ -31,7 +32,7 @@ const withModularHeaders = (config) => {
         fs.writeFileSync(podfilePath, podfileContent);
         console.log('Successfully added use_modular_headers! to Podfile');
       } else {
-        console.warn('Could not find target "blank54" block in Podfile');
+        console.warn('Could not find any target block in Podfile');
       }
 
       return config;
